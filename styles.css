@@ -1,0 +1,100 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+    font-family: "Inter";
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    a {
+        height: 30px;
+        margin-top: 20px;
+        text-decoration: none;
+    }
+}
+
+.container {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+}
+
+section {
+    scroll-snap-align: start;
+    height: 100vh;
+    /* padding: 200px 0 0 220px; */
+    border-top: 10px solid #28A7CF;
+    
+    h1 {
+        margin: 200px 0 0 50px;
+    }
+}
+
+
+.landing {
+    scroll-snap-align: start;
+    scroll-margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+
+    p {
+        color: #777980;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .landing-text {
+        width: 80rem;
+        padding: 180px 0 0 220px;
+
+        .start-button {
+            /* height: 30px; */
+            margin-top: 20px;
+            padding: 10px 16px 10px 16px;
+            background-color: #28A7CF;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 6px;
+        }
+    }
+
+    .landing-img {
+        width: 80rem;
+        border: 10px solid #C3EAF6;
+        border-radius: 70%;
+    }
+}
+
+#brandname {
+    margin-left: 220px;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#togglenav {
+    margin-right: 220px;
+    background-color: #DAF5FF;
+    color: #1987B0;
+    border-radius: 6px;
+}
