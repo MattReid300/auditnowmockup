@@ -17,15 +17,38 @@
 <body>
     <nav>
         <a href="" id="brandname">Auditnow</a>
-        <a href="" id="togglenav"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                class="bi bi-list b" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-            </svg></a>
+        <div class="menu-container">
+            <div class="menu-btn" id="menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </div>
+            <div class="menu" id="menu">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#howwework">How We Work</a></li>
+                    <li><a href="#whatwedo">What We Do</a></li>
+                    <li><a href="#henry">Get Started</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- <a href="" id="togglenav">aa</a> -->
     </nav>
     <div class="container">
+        <!-- <div class="menu2">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#howwework">How We Work</a></li>
+                <li><a href="#whatwedo">What We Do</a></li>
+                <li><a href="#henry">Get Started</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div> -->
         <div class="landing">
-            <div class="landing-text">
+            <div class="landing-text hidden1">
                 <h1>Streamlined Audits <br> for <span style="color: #28A7CF;">Peace of Mind</span></h1>
                 <p>Audits can often feel like a daunting task, but they are essential for maintaining financial accuracy
                     and regulatory compliance. A streamlined audit process can significantly reduce stress and provide
@@ -34,47 +57,206 @@
                 <p>We are your partner for qualified foundations and capital increases.</p>
                 <button class="start-button">Get Started</button>
             </div>
-            <div class="landing-img"></div>
+            <div class="image-box">
+                <img src="/assets/rawlandingpageimage.png" alt="landingpageimage" class="hidden2" id="landing-image">
+            </div>
         </div>
+        <a id="about"></a>
         <section class="about">
-            <h1>About AuditNow</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <div class="image-box" id="about-image-box">
+                <img src="assets/rawaboutpageimage.png" alt="aboutpageimage" id="about-image">
+            </div>
+            <div class="section-text hidden1" id="about-text">
+                <h1>About <span style="color: #28A7CF;">AuditNow</span></h1>
+                <p>We are a dynamic team aiming to transform the auditing process for qualified capital increases and
+                    start-ups. With our automated systems and a well-organized group of auditors and notaries, we
+                    guarantee
+                    to deliver audit reports within 48 hours, provided all necessary documents are complete. Say goodbye
+                    to lengthy and complex audits!
+                </p>
+                <ul>
+                    <li class="hidden2"><span class="list-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="14"
+                                height="14" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708" />
+                                <path fill-rule="evenodd"
+                                    d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg></span>Digital and speedy auditors and notarys</li>
+                    <li class="hidden2"><span class="list-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="14"
+                                height="14" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708" />
+                                <path fill-rule="evenodd"
+                                    d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg></span>Qualified capital increases an foundations</li>
+                    <li class="hidden2"><span class="list-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="14"
+                                height="14" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708" />
+                                <path fill-rule="evenodd"
+                                    d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg></span>Dynamic and well-rehearsed team</li>
+                    <li class="hidden2"><span class="list-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="14"
+                                height="14" fill="currentColor" class="bi bi-chevron-double-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708" />
+                                <path fill-rule="evenodd"
+                                    d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg></span>Deliver audit reports and notarization within 48 hours</li>
+                </ul>
+            </div>
         </section>
-        <section class="howewework">
-            <h1>Howe We Work</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+        <a id="howwework"></a>
+        <section class="howwework">
+            <div class="section-text">
+                <h1>How <span style="color: #28A7CF;">We Work</span></h1>
+                <p>We begin by understanding your specific needs and goals. Together, we'll discuss the scope of the
+                    audit and establish a clear timeline.</p>
+                <div class="card hidden1" id="card1">
+                    <img src="assets/AuditOrder.png" alt="cardimg" class="card-img">
+                    <div class="card-text">
+                        <h4>Audit Order</h4>
+                        <p>Specific objectives of the audit to provide an opinion on the faimess of the financial
+                            statements, to assess the effectiveness of internal controls, to identify areas for
+                            Improvement
+                        </p>
+                    </div>
+                </div>
+                <div class="card hidden1" id="card1">
+                    <img src="assets/ViewingDocuments.png" alt="cardimg" class="card-img">
+                    <div class="card-text">
+                        <h4>Viewing & completing documents</h4>
+                        <p>Once we've stablished the scope of the audit and agreed upon the cajectives, well begin the
+                            process of reviewing and completing your documents
+                        </p>
+                    </div>
+                </div>
+                <div class="card hidden1" id="card1">
+                    <img src="assets/AuditNotarization.png" alt="cardimg" class="card-img">
+                    <div class="card-text">
+                        <h4>Audit and Notarization</h4>
+                        <p>An audit is a systematic examination of an entity's financial statements or sperational
+                            activities to ensure that they are accurate, complete, and comply.
+                        </p>
+                    </div>
+                </div>
+                <div class="card hidden1" id="card1">
+                    <img src="assets/FinalizationReporting.png" alt="cardimg" class="card-img">
+                    <div class="card-text">
+                        <h4>Finalization and reporting to commerical register</h4>
+                        <p>Upon completion of the audit, we will provide you with a detailed written report summariong
+                            our findings, conclusions, and recommendations
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <img src="assets/howweworkimage.png" alt="howweworkpageimage" id="howwework-image">
         </section>
+        <a id="whatwedo"></a>
         <section class="whatwedo">
-            <h1>What We Do</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <div class="section-text" id="whatwedo-text">
+                <h1>What <span style="color: #28A7CF;">We Do</span></h1>
+                <p>Normal audits can be stressful and complicated. However, with digital processes and our assistant
+                    robot "Henry," we can simplify and speed up audits. If you provide all the necessary documents
+                    requested by Henry, we guarantee that the audit report and certification will be ready within two
+                    working days. Additionally, the need to visit a notary is outdated because we handle that for you
+                    through powers of attiomey</p>
+                <div class="wwd-image-holder hidden1" style="text-align: center;">
+                    <img src="assets/whatwedoimage.png" alt="whatwedopageimage" id="whatwedo-image">
+                </div>
+            </div>
+            <div class="services">
+                <div class="service hidden2" id="service1">
+                    <div class="service-text">
+                        <h2>Audit within 36 hours</h2>
+                        <p class="price">CHF 1'500.00</p>
+                        <div class="service-line"></div>
+                    </div>
+                    <img src="assets/serviceimage.png" alt="" class="service-image">
+                </div>
+                <div class="service hidden2" id="service2">
+                    <div class="service-text">
+                        <h2>Notarization within 36 hours</h2>
+                        <p class="price">CHF 1'500.00</p>
+                        <div class="service-line"></div>
+                    </div>
+                    <img src="assets/serviceimage.png" alt="" class="service-image">
+                </div>
+                <div class="service hidden2" id="service3">
+                    <div class="service-text">
+                        <h2>Audit and notarization within 48 hours</h2>
+                        <p class="price">CHF 3'000.00</p>
+                        <div class="service-line"></div>
+                    </div>
+                    <img src="assets/serviceimage.png" alt="" class="service-image">
+                </div>
+                <button id="henrybutton1" class="hidden2">Contact Henry</button>
+            </div>
         </section>
+        <a id="henry"></a>
         <section class="henry">
-            <h1>A Step in the Right Direction</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <img src="assets/henryimage.png" alt="henrypageimage" id="henry-image" class="hidden1">
+            <div class="section-text hidden2" id="henry-text">
+                <h1>A Step in the Right Direction</h1>
+                <p>Henry will guide you through the process to make it as easy and efficient as possible. He will draft
+                    you an email with everything that is necessary and he will let you know about the necessary
+                    documents.</p>
+                <button id="henrybutton2">Contact Henry</button>
+            </div>
         </section>
+        <a id="contact"></a>
         <section class="contact">
-            <h1>We'd love to hear from you</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
+            <div class="contact1">
+                <form class="contact-form">
+                    <h1 style="margin-top: 0;">We'd love to <span style="color: #28A7CF;">hear from you</span></h1>
+                    <div class="form-contents">
+                        <div class="field">
+                            <label for="firstname">First name:</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="Enter First name">
+                        </div>
+                        <div class="field"><label for="lastname">Last name:</label>
+                            <input type="text" id="lastname" name="lastname" placeholder="Enter Last name">
+                        </div>
+                        <div class="field"><label for="email">Email:</label>
+                            <input type="text" id="email" name="email" placeholder="info@auditnow.ch">
+                        </div>
+                        <div class="field"><label for="phone">Phone:</label>
+                            <input type="number" id="phone" name="phone" placeholder="044 720 70 70">
+                        </div>
+                        <div class="field" style="flex-basis: 100%;"><label for="message">Message:</label>
+                            <input type="text" id="message" name="message" placeholder="Enter your Message...">
+                        </div>
+                        <button type="submit" id="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="contact2">
+                <div class="link" id="link1" style="width: 280px;">
+                    <h2>AuditNow</h2>
+                    <p>This phrase often signifies the need for an immediate financial review or examination of a
+                        company's records.</p>
+                    <div class="socials">
+                        <button id="email"></button>
+                        <button id="linkedin"></button>
+                    </div>
+                </div>
+                <div class="link">
+                    <h3>Quick Links</h3>
+                    <a href="">Home</a> <br>
+                    <a href="">About AuditNow</a> <br>
+                    <a href="">How we work</a> <br>
+                    <a href="">What we do</a> <br>
+                    <a href="">Our assistant Henry</a> <br>
+                    <a href="">Contact Us</a>
+                </div>
+                <div class="link">
+                    <h3>Get In Touch</h3>
+                    <p>Seestrasse 353 8038 Zurich</p>
+                    <p>044 720 70 70</p>
+                    <p>info@auditnow.ch</p>
+                </div>
+
+            </div>
         </section>
     </div>
     <script src="main.js"></script>
