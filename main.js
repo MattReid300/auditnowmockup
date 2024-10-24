@@ -1,6 +1,25 @@
 // window.onload = function() {
-//     alert("Scroll on your mouse or touchpad to see scroll effect");
+// alert("Scroll on your mouse or touchpad to see scroll effect");
 // };
+
+const App = Vue.createApp({
+    data() {
+        return {
+            message: "heeey theeeere",
+            showHenry: false,
+        }
+    },
+    methods: {
+        openHenry() {
+            this.showHenry = true;
+        },
+        closeHenry() {
+            this.showHenry = false;
+        },
+    }
+})
+
+App.mount('body');
 
 if (window.innerWidth >= 1100) {
 
@@ -76,20 +95,19 @@ if (window.innerWidth >= 1100) {
 
 const menuBtn = document.getElementById('menu-btn');
 const menu = document.getElementById('menu');
+const link = document.querySelectorAll('.navigation-link');
+// console.log(link);
+
+
 // const menu2 = document.getElementById('menu2');
 
 menuBtn.addEventListener('click', () => {
     menu.classList.toggle('open');
 });
 
-
-// if (window.innerWidth >= 1100) {
-//     menuBtn.addEventListener('click', () => {
-//         menu.classList.toggle('open');
-//     });
-// } else {
-//     menuBtn.addEventListener('click', () => {
-//         menu2.classList.toggle('responsive');
-//     });
-// }
-
+link.forEach((element) => {
+    element.addEventListener('click', () => {
+        menu.classList.toggle('open');
+        // console.log(element);
+    });
+})

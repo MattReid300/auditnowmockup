@@ -12,6 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
 </head>
 
 <body>
@@ -27,35 +29,48 @@
             </div>
             <div class="menu" id="menu">
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#howwework">How We Work</a></li>
-                    <li><a href="#whatwedo">What We Do</a></li>
-                    <li><a href="#henry">Get Started</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" class="navigation-link">About</a></li>
+                    <li><a href="#howwework" class="navigation-link">How We Work</a></li>
+                    <li><a href="#whatwedo" class="navigation-link">What We Do</a></li>
+                    <li><a href="#henry" class="navigation-link">Get Started</a></li>
+                    <li><a href="#contact" class="navigation-link">Contact</a></li>
                 </ul>
             </div>
         </div>
         <!-- <a href="" id="togglenav">aa</a> -->
     </nav>
+    <transition name="fade">
+        <div v-if="showHenry" class="chatbot-overlay" @click="closeHenry"></div>
+    </transition>
+    <transition name="fade">
+        <div v-if="showHenry" class="chatbot-content">
+            <h2>Henryyy</h2>
+            <div class="text">
+                <img src="assets/henrypfp.png" alt="" class="pfp">
+                <div class="message"></div>
+            </div>
+            <div class="text" style="justify-content: flex-end;">
+                <div class="message"></div>
+                <img src="assets/userpfp.png" alt="" class="pfp">
+            </div>
+        </div>
+    </transition>
+
     <div class="container">
-        <!-- <div class="menu2">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#howwework">How We Work</a></li>
-                <li><a href="#whatwedo">What We Do</a></li>
-                <li><a href="#henry">Get Started</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div> -->
         <div class="landing">
             <div class="landing-text hidden1">
-                <h1>Streamlined Audits <br> for <span style="color: #28A7CF;">Peace of Mind</span></h1>
+                <h1>
+                    Streamlined Audits for
+                    <span style="color: #28A7CF;">Peace of Mind</span>
+                </h1>
                 <p>Audits can often feel like a daunting task, but they are essential for maintaining financial accuracy
                     and regulatory compliance. A streamlined audit process can significantly reduce stress and provide
                     you with greater peace of mind.
                 </p>
                 <p>We are your partner for qualified foundations and capital increases.</p>
-                <button class="start-button">Get Started</button>
+                <a href="#henry">
+                    <button class="start-button">Get Started</button>
+                </a>
             </div>
             <div class="image-box">
                 <img src="/assets/rawlandingpageimage.png" alt="landingpageimage" class="hidden2" id="landing-image">
@@ -190,7 +205,9 @@
                     </div>
                     <img src="assets/serviceimage.png" alt="" class="service-image">
                 </div>
-                <button id="henrybutton1" class="hidden2">Contact Henry</button>
+                <a href="#henry">
+                    <button id="henrybutton1" class="hidden2">Contact Henry</button>
+                </a>
             </div>
         </section>
         <a id="henry"></a>
@@ -201,7 +218,7 @@
                 <p>Henry will guide you through the process to make it as easy and efficient as possible. He will draft
                     you an email with everything that is necessary and he will let you know about the necessary
                     documents.</p>
-                <button id="henrybutton2">Contact Henry</button>
+                <button id="henrybutton2" @click="openHenry">Contact Henry</button>
             </div>
         </section>
         <a id="contact"></a>
@@ -236,8 +253,16 @@
                     <p>This phrase often signifies the need for an immediate financial review or examination of a
                         company's records.</p>
                     <div class="socials">
-                        <button id="email"></button>
-                        <button id="linkedin"></button>
+                        <div class="social">
+                            <a id="email">
+                                <img src="assets/outlookicon.png" alt="emailicon">
+                            </a>
+                        </div>
+                        <div class="social">
+                            <a id="linkedin">
+                                <img src="assets/linkedinicon.png" alt="linkedinicon">
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="link">
@@ -249,13 +274,12 @@
                     <a href="">Our assistant Henry</a> <br>
                     <a href="">Contact Us</a>
                 </div>
-                <div class="link">
+                <div class="link" id="link3">
                     <h3>Get In Touch</h3>
                     <p>Seestrasse 353 8038 Zurich</p>
                     <p>044 720 70 70</p>
                     <p>info@auditnow.ch</p>
                 </div>
-
             </div>
         </section>
     </div>

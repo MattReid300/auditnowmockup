@@ -18,10 +18,13 @@ nav {
     z-index: 3;
 
     a {
+        display: inline-block;
         height: 30px;
-        margin-top: 20px;
+        /* margin-top: 20px; */
         text-decoration: none;
         white-space: nowrap;
+        /* display: flex; 
+        align-items: center; */
     }
 }
 
@@ -49,7 +52,7 @@ nav {
     position: absolute;
     right: 15px;
     top: 15px;
-    z-index: 10;
+    z-index: 6;
 }
 
 .menu-btn:hover {
@@ -93,10 +96,19 @@ nav {
 }
 
 .menu ul li a {
+    /* display: inline-block; */
+    display: flex;
     color: #000000;
     text-decoration: none;
     font-size: 16px;
     padding: 5px;
+    transition: font-weight 0.3s, color 0.4s;
+    align-items: center;
+}
+
+.menu ul li a:hover {
+    font-weight: bold;
+    color: #1987B0;
 }
 
 
@@ -126,12 +138,13 @@ button {
     border: none;
     border-radius: 6px;
     font-family: 'Inter';
+    transition: 0.3s;
 }
 
 button:hover {
     background-color: #FFFFFF;
     color: #28A7CF;
-    border: 2px solid #28A7CF;
+    border: 1px solid #28A7CF;
 }
 
 section {
@@ -410,7 +423,7 @@ section {
 #henrybutton2:hover {
     background-color: #28A7CF;
     color: #FFFFFF;
-    border: 2px solid #FFFFFF;
+    border: 1px solid #FFFFFF;
 }
 
 #henry-text {
@@ -455,6 +468,31 @@ section {
     a {
         line-height: 25px;
     }
+
+
+    .socials {
+        display: flex;
+        /* justify-content: flex-start; */
+
+        .social {
+            margin: 4px;
+            padding-top: 5px;
+            border: 2px solid #28A7CF;
+            border-radius: 6px;
+            width: 35px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+
+            img {
+                height: 20px;
+            }
+        }
+        .social:hover {
+            background-color: red;
+        }
+    }
+
 }
 
 .contact-form {
@@ -511,10 +549,74 @@ section {
     }
 }
 
+/* CHATBOT */
 
+.chatbot-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: #00000056;
+    z-index: 8;
+}
+
+.chatbot-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60rem;
+    height: 30rem;
+    padding: 20px;
+    /* background-color: #F2FAFD; */
+    background-color: #C0EFFF;
+    /* background-color: #FFFFFF; */
+    z-index: 9;
+}
+
+.message {
+    width: 300px;
+    height: 50px;
+    background-color: #F2FAFD;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.text {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    /* .fade-leave-to is applied to the element at the end of leave transition */
+    opacity: 0;
+    /* Start hidden */
+}
+
+.fade-enter-to,
+.fade-leave {
+    /* .fade-enter-to is applied to the element at the end of enter transition */
+    opacity: 1;
+    /* End visible */
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease;
+    /* Duration and easing */
+}
+
+.pfp {
+    width: 50px;
+}
 
 
 @media screen and (max-width: 1100px) {
+
+    .container {
+        scroll-padding-top: 60px;
+    }
 
     .hidden1,
     .hidden2 {
@@ -529,6 +631,10 @@ section {
         margin: 20px 30px 0;
     }
 
+    button {
+        width: 100%;
+    }
+
     .menu-container {
         margin: 0;
     }
@@ -536,24 +642,46 @@ section {
     .menu {
         /* position: relative; */
         text-align: center;
-        height: 0;
+        width: 100vw;
+        height: 100vh;
         top: 60px;
         right: 0;
-        /* align-items: normal; */
-        justify-content: flex-start ;
-        flex-wrap: wrap;
+        padding-right: 20px;
+        padding-top: 100px;
+        align-items: normal;
+        /* justify-content: flex-end; */
+        /* flex-wrap: wrap; */
         /* width: 0; */
         transition: height 0.3s ease, width 0s;
-        background-color: #F2FAFD;
+        /* background-color: #F2FAFD; */
+        background-color: #28a8cfda;
+        opacity: 0;
+        /* visibility: hidden; */
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        /* display: none; */
     }
 
     .menu ul {
         flex-direction: column;
+        justify-content: space-evenly;
+        height: 300px;
+        /* background-color: red; */
+
+
+        li a {
+            color: #FFFFFF;
+            font-size: 25px;
+            font-weight: bold;
+        }
     }
 
     .menu.open {
         width: 100vw;
-        height: 180px;
+        opacity: 1;
+        pointer-events: auto;
+        /* visibility: visible; */
+        /* height: 180px; */
     }
 
     .landing,
@@ -633,5 +761,9 @@ section {
 
     #link1 {
         display: none;
+    }
+
+    #link3 {
+        text-align: right;
     }
 }
